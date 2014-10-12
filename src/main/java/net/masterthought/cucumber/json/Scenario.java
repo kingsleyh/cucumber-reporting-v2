@@ -33,6 +33,7 @@ public class Scenario {
         return sequence((ArrayList) scenario.get("steps")).map(s -> new Step((LinkedHashMap) s));
     }
 
+    // TODO - this should be language specific
     public Boolean isScenario(){
         return keyword().startsWith("Scenario");
     }
