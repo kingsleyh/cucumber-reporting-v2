@@ -53,41 +53,41 @@ public class ReportInformationTest {
     public void shouldReturnTotalNumberOfScenarios() {
         assertThat(reportInformation.totalNumberOfScenarios(), is(10));
     }
-//
-//    @Test
-//    public void shouldReturnTotalNumberOfFeatures() {
-//        assertThat(reportInformation.getTotalNumberOfFeatures(), is(4));
-//    }
-//
-//    @Test
-//    public void shouldReturnTotalNumberOfSteps() {
-//        assertThat(reportInformation.getTotalNumberOfSteps(), is(98));
-//    }
-//
-//    @Test
-//    public void shouldReturnTotalNumberPassingSteps() {
-//        assertThat(reportInformation.getTotalNumberPassingSteps(), is(90));
-//    }
-//
-//    @Test
-//    public void shouldReturnTotalNumberFailingSteps() {
-//        assertThat(reportInformation.getTotalNumberFailingSteps(), is(2));
-//    }
-//
-//    @Test
-//    public void shouldReturnTotalNumberSkippedSteps() {
-//        assertThat(reportInformation.getTotalNumberSkippedSteps(), is(6));
-//    }
-//
-//    @Test
-//    public void shouldReturnTotalNumberPendingSteps() {
-//        assertThat(reportInformation.getTotalNumberPendingSteps(), is(0));
-//    }
-//
-//    @Test
-//    public void shouldReturnTotalNumberMissingSteps() {
-//        assertThat(reportInformation.getTotalNumberMissingSteps(), is(0));
-//    }
+
+    @Test
+    public void shouldReturnTotalNumberOfFeatures() {
+        assertThat(reportInformation.totalNumberOfFeatures(), is(4));
+    }
+
+    @Test
+    public void shouldReturnTotalNumberOfSteps() {
+        assertThat(reportInformation.totalNumberOfSteps(), is(98));
+    }
+
+    @Test
+    public void shouldReturnTotalNumberPassingSteps() {
+        assertThat(reportInformation.totalNumberPassingSteps(), is(90));
+    }
+
+    @Test
+    public void shouldReturnTotalNumberFailingSteps() {
+        assertThat(reportInformation.totalNumberFailingSteps(), is(2));
+    }
+
+    @Test
+    public void shouldReturnTotalNumberSkippedSteps() {
+        assertThat(reportInformation.totalNumberSkippedSteps(), is(6));
+    }
+
+    @Test
+    public void shouldReturnTotalNumberPendingSteps() {
+        assertThat(reportInformation.totalNumberPendingSteps(), is(0));
+    }
+
+    @Test
+    public void shouldReturnTotalNumberMissingSteps() {
+        assertThat(reportInformation.totalNumberMissingSteps(), is(0));
+    }
 //
 //    @Test
 //    public void shouldReturnTotalDuration() {

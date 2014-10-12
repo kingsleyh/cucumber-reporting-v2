@@ -36,5 +36,25 @@ public class Step {
         return sequence((ArrayList) step.get("rows")).map(s -> new Row((LinkedHashMap) s));
     }
 
+    public Boolean hasPassed() {
+        return result().status().equals("passed");
+    }
+
+    public Boolean hasFailed() {
+        return result().status().equals("failed");
+    }
+
+    public Boolean wasSkipped() {
+        return result().status().equals("skipped");
+    }
+
+    public Boolean wasPending() {
+        return result().status().equals("pending");
+    }
+
+    public Boolean wasMissing() {
+        return result().status().equals("missing");
+    }
+
 
 }
