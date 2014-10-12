@@ -27,7 +27,7 @@ public class ReportParserTest {
     @Test
     public void shouldContainFourFeatures() throws IOException {
         ReportParser reportParser = new ReportParser(validJsonReports());
-        assertThat(reportParser.reports().map(r -> r.getValue().features()).size(), is(4));
+        assertThat(reportParser.reports().flatMap(r -> r.getValue().features()).size(), is(4));
     }
 
     @Test

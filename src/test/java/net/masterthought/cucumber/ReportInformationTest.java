@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class ReportInformationTest {
@@ -48,10 +49,10 @@ public class ReportInformationTest {
 //        assertThat(reportInformation.getProjectFeatureMap().entrySet().iterator().next().getValue().get(0), is(Feature.class));
 //    }
 //
-//    @Test
-//    public void shouldReturnTotalNumberOfScenarios() {
-//        assertThat(reportInformation.getTotalNumberOfScenarios(), is(10));
-//    }
+    @Test
+    public void shouldReturnTotalNumberOfScenarios() {
+        assertThat(reportInformation.totalNumberOfScenarios(), is(10));
+    }
 //
 //    @Test
 //    public void shouldReturnTotalNumberOfFeatures() {
