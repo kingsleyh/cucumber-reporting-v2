@@ -8,7 +8,11 @@ import net.masterthought.cucumber.json.JsonReport;
 import net.masterthought.cucumber.json.Scenario;
 import net.masterthought.cucumber.json.Step;
 
+import java.math.BigDecimal;
+import java.time.Instant;
+
 import static com.googlecode.totallylazy.Predicates.is;
+import static com.googlecode.totallylazy.numbers.Numbers.*;
 
 public class ReportInformation {
 
@@ -32,7 +36,7 @@ public class ReportInformation {
     }
 
     public Integer totalNumberOfSteps() {
-        return (Integer) features.map(Feature::scenarios).flatMap(s -> s.map(sc -> sc.steps().size())).reduce(Numbers.sum);
+        return (Integer) features.map(Feature::scenarios).flatMap(s -> s.map(sc -> sc.steps().size())).reduce(sum);
     }
 
     public Integer totalNumberPassingSteps() {
@@ -53,5 +57,13 @@ public class ReportInformation {
 
     public Integer totalNumberMissingSteps() {
         return features.map(Feature::scenarios).flatMap(s -> s.flatMap(Scenario::steps)).filter(Step::wasMissing).size();
+    }
+
+    public BigDecimal totalDuration() {
+        return (BigDecimal) features.map(Feature::scenarios).flatMap(s -> s.flatMap(Scenario::steps)).map(Step::duration).reduce(sum);
+    }
+
+    public Instant timeStamp() {
+        return Instant.now();
     }
 }

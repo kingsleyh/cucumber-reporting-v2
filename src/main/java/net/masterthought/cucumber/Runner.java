@@ -10,8 +10,12 @@ public class Runner {
         File rd = new File("/Users/kings/development/projects/cucumber-reporting-v2/src/test/resources");
         List<String> list = new ArrayList<String>();
         list.add("/Users/kings/development/projects/cucumber-reporting-v2/src/test/resources/net/masterthought/cucumber/project1.json");
-        ReportParser reportParser = new ReportParser(list);
-        System.out.println(reportParser.reports().head().getValue().features().head().scenarios().head().keyword());
+//        ReportParser reportParser = new ReportParser(list);
+//        System.out.println(reportParser.reports().head().getValue().features().head().scenarios().head().keyword());
+
+        ReportBuilder reportBuilder = new ReportBuilder(list,rd,"01","cool",false,false,false);
+        reportBuilder.generateReports();
+
     }
 
 }

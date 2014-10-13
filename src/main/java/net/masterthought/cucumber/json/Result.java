@@ -26,7 +26,7 @@ public class Result {
     }
 
     public BigDecimal duration() {
-        return option(new BigDecimal((String)result.get("duration"))).getOrElse(new BigDecimal(0));
+        return option((BigDecimal)result.get("duration")).getOrElse(new BigDecimal(0));
     }
 
 

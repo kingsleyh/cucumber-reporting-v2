@@ -6,7 +6,9 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URISyntaxException;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,21 +90,21 @@ public class ReportInformationTest {
     public void shouldReturnTotalNumberMissingSteps() {
         assertThat(reportInformation.totalNumberMissingSteps(), is(0));
     }
-//
-//    @Test
-//    public void shouldReturnTotalDuration() {
-//        assertThat(reportInformation.getTotalDuration(), is(236050000L));
-//    }
+
+    @Test
+    public void shouldReturnTotalDuration() {
+        assertThat(reportInformation.totalDuration(), is(new BigDecimal(236050000)));
+    }
 //
 //    @Test
 //    public void shouldReturnTotalDurationAsString() {
 //        assertThat(reportInformation.getTotalDurationAsString(), is("236 ms"));
 //    }
 //
-//    @Test
-//    public void shouldReturnTimeStamp() {
-//        assertThat(reportInformation.timeStamp(), is(String.class));
-//    }
+    @Test
+    public void shouldReturnTimeStamp() {
+        assertThat(reportInformation.timeStamp(), instanceOf(Instant.class));
+    }
 //
 //    @Test
 //    public void shouldReturnReportStatusColour() {

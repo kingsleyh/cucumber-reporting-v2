@@ -2,6 +2,7 @@ package net.masterthought.cucumber.json;
 
 import com.googlecode.totallylazy.Sequence;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
@@ -54,6 +55,10 @@ public class Step {
 
     public Boolean wasMissing() {
         return result().status().equals("missing");
+    }
+
+    public BigDecimal duration(){
+      return result().duration();
     }
 
 
